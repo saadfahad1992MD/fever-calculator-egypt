@@ -13,16 +13,22 @@ export default function CountrySelector({ currentCountry, onCountryChange }) {
   ]
 
   const handleCountrySelect = (code) => {
+    setIsOpen(false)
+    
+    // Set localStorage FIRST before any other operations
     if (code === 'AUTO') {
       localStorage.removeItem('userCountry')
       localStorage.removeItem('countryOverride')
     } else {
+      // For manual selection, set both values
       localStorage.setItem('userCountry', code)
       localStorage.setItem('countryOverride', 'true')
     }
-    onCountryChange(code)
-    setIsOpen(false)
-    window.location.reload()
+    
+    // Force a hard reload to ensure localStorage is persisted
+    setTimeout(() => {
+      window.location.reload(true)
+    }, 100)
   }
 
   const getCurrentCountryInfo = () => {

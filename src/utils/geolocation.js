@@ -69,21 +69,32 @@ export async function detectUserCountry() {
 
 /**
  * Gets the country from localStorage or detects it
- * Caches the result in localStorage for subsequent visits
+ * Respects manual country override for testing
  */
 export async function getUserCountry() {
-  // Check if country is already cached
+  // Check if user manually selected a country (for testing)
+  const countryOverride = localStorage.getItem('countryOverride');
   const cachedCountry = localStorage.getItem('userCountry');
   
-  if (cachedCountry) {
-    console.log('Using cached country:', cachedCountry);
+  // If user manually selected a country, use that
+  if (countryOverride === 'true' && cachedCountry) {
+    console.log('Using manually selected country:', cachedCountry);
     return cachedCountry;
   }
   
-  // Detect country and cache it
+  // Check if country was auto-detected and cached
+  if (cachedCountry && !countryOverride) {
+    console.log('Using cached auto-detected country:', cachedCountry);
+    return cachedCountry;
+  }
+  
+  // Auto-detect country and cache it
   const country = await detectUserCountry();
   localStorage.setItem('userCountry', country);
+  // Mark as auto-detected (not manual override)
+  localStorage.removeItem('countryOverride');
   
+  console.log('Auto-detected and cached country:', country);
   return country;
 }
 
@@ -92,4 +103,5 @@ export async function getUserCountry() {
  */
 export function clearCountryCache() {
   localStorage.removeItem('userCountry');
+  localStorage.removeItem('countryOverride');
 }
