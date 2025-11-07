@@ -3,6 +3,7 @@ import App from './App.jsx'
 import AppEnglish from './AppEnglish.jsx'
 import { LanguageSelector } from './LanguageSelector.jsx'
 import { getUserCountry } from './utils/geolocation.js'
+import CountrySelector from './components/CountrySelector.jsx'
 
 export function AppWrapper() {
   const [language, setLanguage] = useState('ar')
@@ -73,8 +74,18 @@ export function AppWrapper() {
   // Language selector removed - Arabic is default
 
   if (language === 'ar') {
-    return <App onChangeLanguage={handleChangeLanguage} country={country} />
+    return (
+      <>
+        <App onChangeLanguage={handleChangeLanguage} country={country} />
+        <CountrySelector currentCountry={country} onCountryChange={setCountry} />
+      </>
+    )
   }
 
-  return <AppEnglish onChangeLanguage={handleChangeLanguage} country={country} />
+  return (
+    <>
+      <AppEnglish onChangeLanguage={handleChangeLanguage} country={country} />
+      <CountrySelector currentCountry={country} onCountryChange={setCountry} />
+    </>
+  )
 }
