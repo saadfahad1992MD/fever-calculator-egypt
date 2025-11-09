@@ -1299,10 +1299,19 @@ function AppEnglish({ onChangeLanguage, country = 'DEFAULT' }) {
                                 Available forms: <strong>suppositories</strong>
                               </div>
                               <div className="grid gap-2 text-purple-800 text-sm">
-                                <div>• Voltaren - Voltaren</div>
-                                <div>• Rofenac - Rofenac</div>
-                                <div>• Diclofen</div>
-                                <div>• Olfen</div>
+                                {country === 'EG' ? (
+                                  <>
+                                    <div>• Epifenac - إبيفيناك</div>
+                                    <div>• Dolphin - دولفين</div>
+                                  </>
+                                ) : (
+                                  <>
+                                    <div>• Voltaren - Voltaren</div>
+                                    <div>• Rofenac - Rofenac</div>
+                                    <div>• Diclofen</div>
+                                    <div>• Olfen</div>
+                                  </>
+                                )}
                               </div>
                             </div>
                           </TabsContent>

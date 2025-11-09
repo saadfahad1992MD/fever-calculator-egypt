@@ -1332,10 +1332,19 @@ function App({ onChangeLanguage, country = 'DEFAULT' }) {
                                 متوفر بأشكال: <strong>تحاميل</strong>
                               </div>
                               <div className="grid gap-2 text-purple-800 text-sm">
-                                <div>• فولتارين - Voltaren</div>
-                                <div>• روفيناك - Rofenac</div>
-                                <div>• ديكلوفين - Diclofen</div>
-                                <div>• أولفين - Olfen</div>
+                                {country === 'EG' ? (
+                                  <>
+                                    <div>• إبيفيناك - Epifenac</div>
+                                    <div>• دولفين - Dolphin</div>
+                                  </>
+                                ) : (
+                                  <>
+                                    <div>• فولتارين - Voltaren</div>
+                                    <div>• روفيناك - Rofenac</div>
+                                    <div>• ديكلوفين - Diclofen</div>
+                                    <div>• أولفين - Olfen</div>
+                                  </>
+                                )}
                               </div>
                             </div>
                           </TabsContent>
