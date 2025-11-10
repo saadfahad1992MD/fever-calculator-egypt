@@ -950,7 +950,7 @@ function AppEnglish({ onChangeLanguage, country = 'DEFAULT' }) {
                     className="flex items-center gap-2 px-6 py-3"
                   >
                     <span>💊</span>
-                    <span>Suppositories</span>
+                    <span>Suppositories (rectally)</span>
                   </Button>
                 </div>
               </div>
@@ -1216,7 +1216,7 @@ function AppEnglish({ onChangeLanguage, country = 'DEFAULT' }) {
                       <AccordionTrigger className="text-right">
                         <div className="flex items-center gap-2 md:gap-3">
                           <Pill className="h-5 w-5 text-blue-600" />
-                          <span className="text-lg font-semibold">Paracetamol Family</span>
+                          <span className="text-lg font-semibold">Paracetamol Family (Acetaminophen)</span>
                         </div>
                       </AccordionTrigger>
                       <AccordionContent className="space-y-6 pt-4">
@@ -1742,7 +1742,7 @@ function AppEnglish({ onChangeLanguage, country = 'DEFAULT' }) {
           {/* Contact Information */}
           <div className="border-t pt-4">
             <p className="mt-1 font-medium">
-              <span className="text-black">For advertising or inquiries: </span>
+              <span className="text-black">Contact: </span>
               <span className="text-blue-600">fever.calc@gmail.com</span>
             </p>
           </div>

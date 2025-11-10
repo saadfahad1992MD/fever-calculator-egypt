@@ -974,7 +974,7 @@ function App({ onChangeLanguage, country = 'DEFAULT' }) {
                     className="flex items-center gap-2 px-6 py-3"
                   >
                     <span>💊</span>
-                    <span>التحاميل</span>
+                    <span>التحاميل (اللبوس)</span>
                   </Button>
                   <Button
                     variant={medicationType === 'syrup' ? 'default' : 'outline'}
@@ -1249,7 +1249,7 @@ function App({ onChangeLanguage, country = 'DEFAULT' }) {
                       <AccordionTrigger className="text-right">
                         <div className="flex items-center gap-2 md:gap-3">
                           <Pill className="h-5 w-5 text-blue-600" />
-                          <span className="text-lg font-semibold">عائلة الباراسيتامول</span>
+                          <span className="text-lg font-semibold">عائلة الباراسيتامول (اسيتامينوفين)</span>
                         </div>
                       </AccordionTrigger>
                       <AccordionContent className="space-y-6 pt-4">
@@ -1777,7 +1777,7 @@ function App({ onChangeLanguage, country = 'DEFAULT' }) {
           {/* Contact Information */}
           <div className="border-t pt-4">
             <p className="mt-1 font-medium">
-              <span className="text-black">للإعلان او الاستفسار </span>
+              <span className="text-black">للتواصل </span>
               <span className="text-blue-600">fever.calc@gmail.com</span>
             </p>
           </div>

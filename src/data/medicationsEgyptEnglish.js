@@ -5,6 +5,7 @@ import cetalSyrupImg from '../assets/medications/cetal_syrup_combined.webp'
 import abimolSyrupImg from '../assets/medications/abimol_syrup.webp'
 import paramolSyrupImg from '../assets/medications/paramol_syrup.jpg'
 import panadolBabySuspensionImg from '../assets/medications/panadol_baby_suspension.webp'
+import panadolPinkImg from '../assets/medications/panadol_pink.webp'
 import brufenImg from '../assets/medications/brufen_new.jpg'
 import profinalSyrupImg from '../assets/medications/profinal_syrup.jpg'
 import nurofenSyrupImg from '../assets/medications/nurofen_syrup.jpg'
@@ -104,6 +105,16 @@ export const medicationsEgyptEnglish = {
       form: 'Syrup',
       image: panadolBabySuspensionImg,
       ageRestriction: ''
+    },
+    {
+      id: 'panadol-pink-egypt',
+      name: 'Panadol',
+      ingredient: 'Paracetamol',
+      concentration: 120, // mg per 5ml
+      volume: 5, // ml
+      form: 'Syrup',
+      image: panadolPinkImg,
+      ageRestriction: ''
     }
   ],
   ibuprofen: [
@@ -160,8 +171,8 @@ export const suppositoriesEgyptEnglish = {
       concentration: 120,
       form: 'suppository',
       image: cetalSuppImg,
-      ageRestriction: '6-12.9',
-      weightRange: '6-12.9 kg'
+      ageRestriction: '8-12.9',
+      weightRange: '8-12.9 kg'
     },
     // 300mg suppositories
     {
